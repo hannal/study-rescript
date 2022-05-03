@@ -3,11 +3,23 @@ rule astj
   command = /Users/hannal/Workspace/study/rescript/rescript-project-template/node_modules/rescript/darwin/bsc.exe  -warn-error +101 -bs-v 9.1.4  -absname -bs-ast -o $out $i
 o src/Demo.ast : astj ../../src/Demo.res
 rule deps
-  command = /Users/hannal/Workspace/study/rescript/rescript-project-template/node_modules/rescript/darwin/bsb_helper.exe -hash c6750ded0211546f2cf470c10a59daed $in
+  command = /Users/hannal/Workspace/study/rescript/rescript-project-template/node_modules/rescript/darwin/bsb_helper.exe -hash 0c0a05530376b1f1eacb890c4b5a7bd0 $in
   restat = 1
 o src/Demo.d : deps src/Demo.ast
 rule mij
-  command = /Users/hannal/Workspace/study/rescript/rescript-project-template/node_modules/rescript/darwin/bsc.exe -I src   -warn-error +101 -bs-package-name rescript-project-template -bs-package-output commonjs:$in_d:.bs.js $i
+  command = /Users/hannal/Workspace/study/rescript/rescript-project-template/node_modules/rescript/darwin/bsc.exe -I src   -warn-error +101 -bs-package-name rescript-project-template -bs-package-output es6:$in_d:.bs.js $i
   dyndep = 1
   restat = 1
 o src/Demo.cmj src/Demo.cmi ../../src/Demo.bs.js : mij src/Demo.ast
+o src/School.ast : astj ../../src/School.res
+o src/School.d : deps src/School.ast
+o src/School.cmj src/School.cmi ../../src/School.bs.js : mij src/School.ast
+o src/Sadbox2.ast : astj ../../src/Sadbox2.res
+o src/Sadbox2.d : deps src/Sadbox2.ast
+o src/Sadbox2.cmj src/Sadbox2.cmi ../../src/Sadbox2.bs.js : mij src/Sadbox2.ast
+o src/Sandbox1.ast : astj ../../src/Sandbox1.res
+o src/Sandbox1.d : deps src/Sandbox1.ast
+o src/Sandbox1.cmj src/Sandbox1.cmi ../../src/Sandbox1.bs.js : mij src/Sandbox1.ast
+o src/Sandbox3.ast : astj ../../src/Sandbox3.res
+o src/Sandbox3.d : deps src/Sandbox3.ast
+o src/Sandbox3.cmj src/Sandbox3.cmi ../../src/Sandbox3.bs.js : mij src/Sandbox3.ast

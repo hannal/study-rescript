@@ -7,4 +7,20 @@ o Demo.cmi : cp ../bs/src/Demo.cmi
 o Demo.cmj : cp ../bs/src/Demo.cmj
 o Demo.cmt : cp ../bs/src/Demo.cmt
 o Demo.res : cp ../../src/Demo.res
-build install.stamp : touch Demo.cmi Demo.cmj 
+o School.cmi : cp ../bs/src/School.cmi
+o School.cmj : cp ../bs/src/School.cmj
+o School.cmt : cp ../bs/src/School.cmt
+o School.res : cp ../../src/School.res
+o Sadbox2.cmi : cp ../bs/src/Sadbox2.cmi
+o Sadbox2.cmj : cp ../bs/src/Sadbox2.cmj
+o Sadbox2.cmt : cp ../bs/src/Sadbox2.cmt
+o Sadbox2.res : cp ../../src/Sadbox2.res
+o Sandbox1.cmi : cp ../bs/src/Sandbox1.cmi
+o Sandbox1.cmj : cp ../bs/src/Sandbox1.cmj
+o Sandbox1.cmt : cp ../bs/src/Sandbox1.cmt
+o Sandbox1.res : cp ../../src/Sandbox1.res
+o Sandbox3.cmi : cp ../bs/src/Sandbox3.cmi
+o Sandbox3.cmj : cp ../bs/src/Sandbox3.cmj
+o Sandbox3.cmt : cp ../bs/src/Sandbox3.cmt
+o Sandbox3.res : cp ../../src/Sandbox3.res
+build install.stamp : touch Demo.cmi Demo.cmj School.cmi School.cmj Sadbox2.cmi Sadbox2.cmj Sandbox1.cmi Sandbox1.cmj Sandbox3.cmi Sandbox3.cmj 
